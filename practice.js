@@ -1,3 +1,2 @@
-console.dir(document.body.childNodes);
-
-console.dir(document.body.childNodes[1]);
+let firstelement=document.querySelector("#sakibb");
+console.dir("firstelement");
