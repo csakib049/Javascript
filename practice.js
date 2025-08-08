@@ -1,7 +1,3 @@
-let s=document.getElementsByClassName("container");
+console.dir(document.body.childNodes);
 
-
-
-let ss=document.getElementsByTagName("h1");
-
-console.log(ss);
+console.dir(document.body.childNodes[1]);
