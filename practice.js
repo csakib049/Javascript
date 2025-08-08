@@ -1,2 +1,1 @@
-let firstelement=document.querySelector("#sakibb");
-console.dir("firstelement");
+document.getElementById("heading").innerText = "You clicked the button!";
