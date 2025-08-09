@@ -1,0 +1,12 @@
+.box{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+
+    text-align: center;
+    color: aliceblue;
+    background-color: navy;
+    margin: 5px;
+
+}
+
