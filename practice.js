@@ -1,15 +1,19 @@
-let divs=document.querySelectorAll(".box");
+// let btn=document.querySelector(".btn");
 
 
-let idx=0;
-for(div of divs){
+// btn.classList.remove("hide");
 
-    // div.innerText=`sakib ${idx}`;
-    // div.innerText=`sakib ${idx}`;
 
-      div.innerText="sakib"+idx;
-    idx++;
+
+let arr=[1,2,3,4,"sakib"];
+
+const sakib =(a)=>{
+
+  a.forEach((b)=>{
+    console.log(b);
+   });
+
 }
 
 
-
+sakib(arr);
