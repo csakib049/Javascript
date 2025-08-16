@@ -1,6 +1,9 @@
+let sakib=[1,2,3,4];
 
-let sa=document.querySelector(".btn");
+  const printrray=(a)=>{
+    a.forEach((b)=>{
+        console.log(b);
+    });
+  }
 
-
-sa.classList.add("hide");
-sa.classList.remove("hide");
+ printrray(sakib);
