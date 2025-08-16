@@ -1,9 +1,10 @@
-let sakib=[1,2,3,4];
+let sakib = document.querySelector(".btn "); 
 
-  const printrray=(a)=>{
-    a.forEach((b)=>{
-        console.log(b);
-    });
-  }
 
- printrray(sakib);
+sakib.classList.add("enable");
+
+
+
+sakib.addEventListener("click",()=>{
+    sakib.classList.replace("enable","disable");
+});

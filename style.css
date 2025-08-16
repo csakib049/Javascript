@@ -11,3 +11,17 @@
 .hide{
     display: none;
 }
+
+.hover{
+    font-weight: bold;
+}
+
+.enable{
+    background-color: aquamarine;
+    color: tomato;
+}
+
+.disable{
+    background-color: brown;
+    color:blueviolet;
+}
