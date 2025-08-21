@@ -1,27 +1,23 @@
-
-.btn{
-    color: aquamarine;
+.mybtn{
+    font-size: 4rem;
     margin: 10px;
-    background-color: blue;
-    padding: 10px 15px;
+    border: none;
     border-radius: 5px;
+    padding: 10px 15px;
+
 }
 
-
-.hide{
-    display: none;
+.enabled{
+    background-color: hsl(204, 100%, 50%);
+    color: white;
 }
 
 .hover{
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
     font-weight: bold;
 }
 
-.enable{
-    background-color: aquamarine;
-    color: tomato;
-}
-
-.disable{
-    background-color: brown;
-    color:blueviolet;
+.disabled{
+    background-color: hsl(0, 0%, 60%);
+    color: hsl(0, 0%, 80%);
 }
