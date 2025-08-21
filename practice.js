@@ -1,39 +1,27 @@
-let buttons = document.querySelectorAll(".mybtn");
-
-
-buttons.classList.add("disabled");
-buttons.classList.remove("mybtn");
-
-
-// buttons.forEach((btn)=>{
-//     btn.classList.add("enabled");
-// });
-
-// buttons.forEach((btn)=>{
-//     btn.classList.replace("enabled","disabled");
-// });
-
-
-
-//----------------------------------------------------
-
-
-
-// buttons.forEach((btn)=>{
-//     btn.addEventListener("mouseover",()=>{
-//         btn.classList.toggle("hover");
-//     });
-// });
-
-
-// buttons.forEach((b)=>{
-//     b.addEventListener("click",()=>{
-//         b.classList.toggle("hover");
-//     });
-// }); 
-
-buttons.forEach((b) => {
-    b.addEventListener("click", () => {
-        b.classList.add("hover");
-    });
+// Simple Promise that works (resolves)
+const goodPromise = new Promise((resolve, reject) => {
+    console.log("Making a good promise...");
+    resolve("Everything is good!");
 });
+
+goodPromise.then((message) => {
+        console.log("Success: " + message);
+    })
+    .catch((error) => {
+        console.log("Error: " + error);
+    });
+
+console.log("-------------------");
+
+// Simple Promise that fails (rejects)
+const badPromise = new Promise((resolve, reject) => {
+    console.log("Making a bad promise...");
+    reject("Something went wrong!");
+});
+
+badPromise.then((message) => {
+        console.log("Success: " + message);
+    })
+    .catch((error) => {
+        console.log("Error: " + error);
+    });
