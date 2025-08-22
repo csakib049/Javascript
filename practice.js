@@ -1,25 +1,13 @@
-const getPromise=()=>{
-  return new Promise((resolve,reject)=>{
-    console.log("I am promise.");
-     resolve("resolve!!!!!!");
-  });
-};
-
-let promise=getPromise();
-promise.then((resolve)=>{
-  console.log("Promise fullfield",resolve);
-});
+ function api(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("Weather Data");
+            resolve(2);
+        },4000);
+    });
+ }
 
 
-// const sakib=()=>{
-//   return new Promise((resolve,reject)=>{
-//     console.log("Promise message");
-//     resolve("resolve message");
-//   });
-// }
-
-
-// let s=sakib();
-// s.then((resolve)=>{
-//   console.log("hi this is sakib ",resolve);
-// });
+ async function getWeatherData(){
+    await api(); 
+ }
