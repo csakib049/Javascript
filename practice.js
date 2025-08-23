@@ -1,21 +1,22 @@
-const promise=new Promise((resolve,reject)=>{
+ new Promise ((resolve,reject)=>{
    setTimeout(()=>{
       let error=true;
       if(!error){
+         console.log("Congratulation!!");
          resolve({user:"sakib",id:"390"});
       }else{
-         reject("Error: Something went wrong.------------------------------");
+         console.log("Error.");
+         reject("Something went Wrong!------");
       }
    },2000);
-});
-
-
-
-promise.then((a)=>{
-    console.log(a);
-    return a.user;    
-}).then((name)=>{
-    console.log(name);
-}).catch((err)=>{
-   console.log(err);
+}).then((a)=>{
+   console.log(a);
+   return a.user;
+}).then((b)=>{
+   console.log(b);
+}).catch((c)=>{
+   console.log(c);
+   return c;
+}).catch((d)=>{
+   console.log(d);
 });
