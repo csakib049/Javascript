@@ -1,22 +1,9 @@
- new Promise ((resolve,reject)=>{
-   setTimeout(()=>{
-      let error=true;
-      if(!error){
-         console.log("Congratulation!!");
-         resolve({user:"sakib",id:"390"});
-      }else{
-         console.log("Error.");
-         reject("Something went Wrong!------");
-      }
-   },2000);
-}).then((a)=>{
-   console.log(a);
-   return a.user;
-}).then((b)=>{
-   console.log(b);
-}).catch((c)=>{
-   console.log(c);
-   return c;
-}).catch((d)=>{
-   console.log(d);
-});
+const url="https://jsonplaceholder.typicode.com/users";
+
+const getfacts=async()=>{
+    console.log("getting data .................");
+    let response = await fetch(url);
+    console.log(responce); // JSON format
+    let data = await response.json();
+    console.log(data); 
+};
