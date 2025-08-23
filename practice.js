@@ -1,17 +1,21 @@
- function api(){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            console.log("Weather Data");
-            resolve(2);
-        },3000);
-    });
- }
+const promise=new Promise((resolve,reject)=>{
+   setTimeout(()=>{
+      let error=true;
+      if(!error){
+         resolve({user:"sakib",id:"390"});
+      }else{
+         reject("Error: Something went wrong.------------------------------");
+      }
+   },2000);
+});
 
-    console.log("1st");
 
 
- async function getWeatherData(){
-    console.log("2nd");
-    await api(); 
-    console.log("log in successfully . ");
- }
+promise.then((a)=>{
+    console.log(a);
+    return a.user;    
+}).then((name)=>{
+    console.log(name);
+}).catch((err)=>{
+   console.log(err);
+});
