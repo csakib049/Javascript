@@ -12,3 +12,7 @@
 // let h2=document.getElementsByTagName("h2")[0];
 
 // h2.innerHTML="wsdfsdfsdf";
+
+let p1=document.getElementsByClassName("p1")[0];
+
+p1.innerHTML="123123";
