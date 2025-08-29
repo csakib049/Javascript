@@ -1,15 +1,14 @@
-//video 3
-
-let sakib=()=>{
-    alert(Date());
+let sum=0;
+//arrow function
+let increase=()=>{
+    let h1=document.querySelector("#h1");
+    h1.innerHTML= increment(); 
 }
 
 
-function shahriar(){
-    console.log("hi shahriar");
-}
+//normal function
+function increment(){
+        sum+=1;
+    return sum;
 
-function somoy(){
-   let id4= document.querySelector("#id4");
-   id4.innerHTML=Date();
 }
