@@ -1,18 +1,15 @@
-// let h1=document.getElementById("h1");
+//video 3
 
-// h1.innerHTML="sakdifbalksdfjas;dlkfj";
-
-
-
-// let p1=document.getElementsByClassName("p1")[0];
-
-// p1.innerHTML="kire kaj korse";
+let sakib=()=>{
+    alert(Date());
+}
 
 
-// let h2=document.getElementsByTagName("h2")[0];
+function shahriar(){
+    console.log("hi shahriar");
+}
 
-// h2.innerHTML="wsdfsdfsdf";
-
-let p1=document.getElementsByClassName("p1")[0];
-
-p1.innerHTML="123123";
+function somoy(){
+   let id4= document.querySelector("#id4");
+   id4.innerHTML=Date();
+}
