@@ -1,14 +1,13 @@
-let sum=0;
-//arrow function
-let increase=()=>{
-    let h1=document.querySelector("#h1");
-    h1.innerHTML= increment(); 
+let sum = 0;
+let interval;
+
+function startIncrease() {
+  interval = setInterval(() => {
+    sum += 1;
+    document.querySelector("h1").innerHTML = sum;
+  }, 100); // Speed: every 100ms
 }
 
-
-//normal function
-function increment(){
-        sum+=1;
-    return sum;
-
+function stopIncrease() {
+  clearInterval(interval);
 }

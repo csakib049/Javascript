@@ -3,19 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Hold to Increase</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
- 
-<button onclick="increase()">click me </button>
 
-<h1 id="h1">0</h1>
-
-  
-
-
+  <button onmousedown="startIncrease()" onmouseup="stopIncrease()" onmouseleave="stopIncrease()">Hold me!</button>
+  <h1 class="h1">0</h1>
 
   <script src="practice.js"></script>
 </body>
