@@ -10,6 +10,10 @@
 
 <button class="button2">click me2!</button>
 
+
+ <p class="para">HI my name is sakib!</p>
+
+
 <script>
 
   let button2=document.querySelector(".button2");
@@ -21,6 +25,23 @@
   button2.onmousedown=()=>{
     alert("2nd button is clicked !!!");
   }
+
+  //-----------------------------------------
+  let para=document.querySelector(".para"); // take access of the paragraph
+  let Newbtn=document.createElement("button"); //create new element
+   Newbtn.innerText="click here!";  //inner text 
+
+  para.after(Newbtn); //append new button 
+
+  Newbtn.setAttribute("onclick","showalert()");
+
+
+  let showalert=()=>{
+    alert("Mirricle!!!!!  Mirricle!!!!!");
+  }
+
+
+
 
   
 </script>
