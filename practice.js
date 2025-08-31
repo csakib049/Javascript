@@ -1,19 +1,17 @@
-// let para=document.querySelector(".para");
+let lastPara=document.createElement("p"); //create paragraph
+lastPara.innerText="Name: Md.Sakib Chowdhury";
+
+let box=document.querySelector(".box");//access to div
+
+box.append(lastPara); //add paragraph
 
 
-// let a=para.getAttribute("class");
-// console.log(a);
+let newbtn=document.createElement("button"); //create new button 
+newbtn.innerText="click me!";
+
+box.append(newbtn); // add new button
+
+newbtn.remove(); //remove new button
 
 
-// para.setAttribute("class","sakib");
-// let b=para.getAttribute("class");
-// console.log(b);
 
-
-let para=document.querySelector("p");
-
-console.log(para.getAttribute("class"));
-
-para.setAttribute("class","sakib");
-
-console.log(para.getAttribute("class"));
