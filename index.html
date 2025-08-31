@@ -6,47 +6,13 @@
 </head>
 <body>
 
-  <button onclick="console.log('the button is clicked');" onmousedown="alert('the button is clicked')">click me!</button>
 
-<button class="button2">click me2!</button>
-
-
- <p class="para">HI my name is sakib!</p>
-
-
-<script>
-
-  let button2=document.querySelector(".button2");
-
-  button2.onclick=()=>{
-    console.log("2nd button is clicked !!!");
-  }
-
-  button2.onmousedown=()=>{
-    alert("2nd button is clicked !!!");
-  }
-
-  //-----------------------------------------
-  let para=document.querySelector(".para"); // take access of the paragraph
-  let Newbtn=document.createElement("button"); //create new element
-   Newbtn.innerText="click here!";  //inner text 
-
-  para.after(Newbtn); //append new button 
-
-  Newbtn.setAttribute("onclick","showalert()");
+  <div class="msg-container">
+    asdfsadfsadf
+    <button id="new-btn">new</button>
+  </div>
 
 
-  let showalert=()=>{
-    alert("Mirricle!!!!!  Mirricle!!!!!");
-  }
-
-
-
-
-  
-</script>
-
-
-<!-- <script src="practice.js"></script> -->
+<script src="practice.js"></script>
 </body>
 </html>
