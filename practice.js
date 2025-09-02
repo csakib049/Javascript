@@ -1,5 +1,15 @@
-let msgcontainer=document.querySelector(".msg-container");
+function sum(a,b){
+    console.log(a+b);
+}
 
-// msgcontainer.classList.add("hide");
 
-msgcontainer.classList.add("hide");
+function div(a,b){
+    console.log(a-b);
+}
+
+
+function calculator (v,n,sumcallback){
+    sumcallback(v,n);
+}
+
+calculator(1,2,sum);
