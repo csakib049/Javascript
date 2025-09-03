@@ -1,15 +1,16 @@
-function sum(a,b){
-    console.log(a+b);
+function getdata(dataId,getNextdata){
+    setTimeout(()=>{
+        console.log("data",dataId);
+        if(getNextdata){
+            getNextdata();
+        }
+    },2000);
 }
 
-
-function div(a,b){
-    console.log(a-b);
-}
-
-
-function calculator (v,n,sumcallback){
-    sumcallback(v,n);
-}
-
-calculator(1,2,sum);
+getdata(390,()=>{  
+    getdata(389,()=>{
+        getdata(382,()=>{
+            getdata(377);
+        });
+    });
+});                     
