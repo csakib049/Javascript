@@ -1,16 +1,21 @@
-function getdata(dataId,getNextdata){
-    setTimeout(()=>{
-        console.log("data",dataId);
-        if(getNextdata){
-            getNextdata();
-        }
-    },2000);
-}
+const url= "https://api.thecatapi.com/v1/images/search";
 
-getdata(390,()=>{  
-    getdata(389,()=>{
-        getdata(382,()=>{
-            getdata(377);
-        });
-    });
-});                     
+const getfacts =async()=>{
+    console.log("data.............");
+    let response = await fetch(url);
+    console.log(response);
+} 
+const url= "https://api.thecatapi.com/v1/images/search";
+
+const getfacts =async()=>{
+    console.log("data.............");
+    let response = await fetch(url);
+    console.log(response);
+} 
+const url= "https://api.thecatapi.com/v1/images/search";
+
+const getfacts =async()=>{
+    console.log("data.............");
+    let response = await fetch(url);
+    console.log(response);
+} 
