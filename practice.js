@@ -12,6 +12,21 @@ for( let select of dropdowns){
 
     select.append(newOption);
   }
+
+
+
+  select.addeventListener("change", (evt)=>{
+    updateflag(evt.target);
+  });
 }
+
+
+
+const updateflag=(element)=>{
+    let currcode=element.value;
+    let countrycode=countryList[currcode];
+    let newsrc=`asdfsdfsdf`;
+    let img = element.patentElement.querySelector("img");
+};
 
 
