@@ -19,27 +19,50 @@
 }
 
 .container{
-   
-    background-color: blue;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;`
-    
+    background-color: orange;
+    border: 2px solid black;
+    display: grid;
+
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px;
+
 }
+
 
 #box1{
-    color: orange;
-    background-color: brown;
-    
+    border: 2px solid blueviolet;
 }
-
 #box2{
-    color: aqua;
-    background-color: violet;
+    border: 2px solid blueviolet;
 }
-
 #box3{
-    color: tomato;
-    background-color:slategrey;
+    border: 2px solid blueviolet;
+}
+#box4{
+    border: 2px solid blueviolet;
+}
+#box5{
+    border: 2px solid blueviolet;
+}
+#box6{
+    border: 2px solid blueviolet;
+}
+#box7{
+    border: 2px solid blueviolet;
+    grid-row: 2/4;
+}
+#box8{
+    border: 2px solid blueviolet;
+}
+#box9{
+    border: 2px solid blueviolet;
+}
+#box10{
+    border: 2px solid blueviolet;
+}
+#box11{
+    border: 2px solid blueviolet;
+}
+#box12{
+    border: 2px solid blueviolet;
 }
