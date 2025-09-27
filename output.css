@@ -14,6 +14,8 @@
     --color-red-800: oklch(44.4% 0.177 26.899);
     --color-orange-500: oklch(70.5% 0.213 47.604);
     --color-orange-600: oklch(64.6% 0.222 41.116);
+    --color-orange-800: oklch(47% 0.157 37.304);
+    --color-amber-50: oklch(98.7% 0.022 95.277);
     --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-green-300: oklch(87.1% 0.15 154.449);
@@ -21,14 +23,18 @@
     --color-green-500: oklch(72.3% 0.219 149.579);
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-green-700: oklch(52.7% 0.154 150.069);
+    --color-green-900: oklch(39.3% 0.095 152.535);
     --color-cyan-500: oklch(71.5% 0.143 215.221);
     --color-cyan-600: oklch(60.9% 0.126 221.723);
+    --color-cyan-800: oklch(45% 0.085 224.283);
     --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-blue-600: oklch(54.6% 0.245 262.881);
+    --color-blue-800: oklch(42.4% 0.199 265.638);
     --color-pink-300: oklch(82.3% 0.12 346.018);
     --color-pink-400: oklch(71.8% 0.202 349.761);
     --color-pink-500: oklch(65.6% 0.241 354.308);
     --color-pink-600: oklch(59.2% 0.249 0.584);
+    --color-pink-800: oklch(45.9% 0.187 3.815);
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-2xl: 42rem;
@@ -225,11 +231,20 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-green-900 {
+    border-color: var(--color-green-900);
+  }
   .bg-blue-400 {
     background-color: var(--color-blue-400);
   }
+  .bg-blue-800 {
+    background-color: var(--color-blue-800);
+  }
   .bg-cyan-600 {
     background-color: var(--color-cyan-600);
+  }
+  .bg-cyan-800 {
+    background-color: var(--color-cyan-800);
   }
   .bg-green-300 {
     background-color: var(--color-green-300);
@@ -240,8 +255,14 @@
   .bg-orange-600 {
     background-color: var(--color-orange-600);
   }
+  .bg-orange-800 {
+    background-color: var(--color-orange-800);
+  }
   .bg-pink-500 {
     background-color: var(--color-pink-500);
+  }
+  .bg-pink-800 {
+    background-color: var(--color-pink-800);
   }
   .bg-red-400 {
     background-color: var(--color-red-400);
@@ -267,6 +288,9 @@
   .pr-100 {
     padding-right: calc(var(--spacing) * 100);
   }
+  .text-blue-800 {
+    color: var(--color-blue-800);
+  }
   .text-white {
     color: var(--color-white);
   }
@@ -276,6 +300,12 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .text-shadow-amber-50 {
+    --tw-text-shadow-color: oklch(98.7% 0.022 95.277);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-text-shadow-color: color-mix(in oklab, var(--color-amber-50) var(--tw-text-shadow-alpha), transparent);
+    }
   }
   .hover\:h-1\/2 {
     &:hover {
@@ -302,6 +332,17 @@
     &:hover {
       @media (hover: hover) {
         min-height: calc(var(--spacing) * 10);
+      }
+    }
+  }
+  .hover\:hover\:w-1\/2 {
+    &:hover {
+      @media (hover: hover) {
+        &:hover {
+          @media (hover: hover) {
+            width: calc(1/2 * 100%);
+          }
+        }
       }
     }
   }
@@ -333,6 +374,13 @@
       }
     }
   }
+  .hover\:bg-cyan-800 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-cyan-800);
+      }
+    }
+  }
   .hover\:bg-green-500 {
     &:hover {
       @media (hover: hover) {
@@ -354,6 +402,30 @@
       }
     }
   }
+  .hover\:text-cyan-600 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-cyan-600);
+      }
+    }
+  }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
+      }
+    }
+  }
+  .hover\:text-shadow-amber-50 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-text-shadow-color: oklch(98.7% 0.022 95.277);
+        @supports (color: color-mix(in lab, red, red)) {
+          --tw-text-shadow-color: color-mix(in oklab, var(--color-amber-50) var(--tw-text-shadow-alpha), transparent);
+        }
+      }
+    }
+  }
 }
 @property --tw-border-style {
   syntax: "*";
@@ -365,11 +437,22 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-text-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-text-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-outline-style: solid;
+      --tw-text-shadow-color: initial;
+      --tw-text-shadow-alpha: 100%;
     }
   }
 }
