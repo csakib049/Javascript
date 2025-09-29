@@ -1,3 +1,11 @@
 @import "tailwindcss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@layer components {
+  .btn-primary {
+     @apply  bg-amber-600 m-6 w-30 h-10 active:bg-blue-700 rounded-full ;
+  }
+}
