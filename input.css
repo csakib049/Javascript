@@ -4,10 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-   .sakib-photo{
-      @apply size-60 rounded border-2 border-blue-600 hover:scale-110 hover:border-blue-100 hover:brightness-120 hover:transition duration-1000 
-      
+@layer components{
+   .customized-link{
+      @apply  bg-slate-700 hover:bg-slate-400 size-20  flex-row m-3 pl-18 pt-7 flex-wrap flex-auto
    }
-
 }
