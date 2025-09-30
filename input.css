@@ -6,6 +6,10 @@
 
 @layer components {
   .btn-primary {
-     @apply  bg-amber-600 m-6 w-30 h-10 active:bg-blue-700 rounded-full ;
+     @apply  bg-amber-600 m-6 w-30 h-10 active:bg-blue-700 rounded-full font-mono font-normal text-3xl  text-white;
+  }
+
+  .green-btn{
+    @apply h-10 w-35 rounded-4xl bg-green-700 active:bg-red-700 text-4xl text-white border-green-950 border-2 pb-9 mt-9
   }
 }
