@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components{
    .customized-link{
-      @apply  bg-slate-700 hover:bg-slate-400 size-20  flex-row m-3 pl-18 pt-7 flex-wrap flex-auto
+      @apply  bg-slate-700 hover:bg-slate-400 size-10 mt-10 flexflex-row m-3 pl-18 pt-7 flex-wrap flex-auto  rounded-2xl text-2xl 
+       text-amber-500  
    }
-}
+} */
