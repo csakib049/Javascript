@@ -1,27 +1,11 @@
-let guess=25;
+let arr=[1,2,3,4];
 
-let give=prompt("give me a number :");
+let copy=[]; // empty array 
 
-let i=1;
-
-let flag=false;
-
-while(guess!=give){
-    
-    i++;
-
-    if(i<=5){
-        give=prompt("Nope! Try again...");
-    }else{
-        give=alert(" You lost ...sorry");
-        flag=true;
-        break;
-    }
-}
+arr.forEach((element)=>{
+    // console.log(element);
+    copy.push(element);
+});
 
 
-
-if(!flag){
-   let a=alert("congo....");
-}
-
+console.log(copy);
