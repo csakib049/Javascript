@@ -2,20 +2,21 @@ function addten(n){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
             resolve(n+10);
-        },3000);
+        },1000);
     });
 }
 
 
-addten(5)
-   .then((result1)=>{
-    console.log("result1:",result1);
-    return addten(result1);
-   }).then((result2)=>{
-    console.log("result2:",result2);
-    return addten(result2);
-   }).then((result3)=>{
-    console.log("result3:",result3);
-   }).catch((error)=>{
-    console.log("error:",error);
-   });
+(async function run( ) {
+     
+    let result1 = await addten(5);
+    console.log("result: ",result1);
+    
+    let result2 = await addten(result1);
+    console.log("result: ",result2);
+
+    let result3 = await addten(result2);
+    console.log("result: ",result3);
+})();
+
+
