@@ -1,11 +1,21 @@
-let arr=[1,2,3,4];
+function addten(n){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve(n+10);
+        },3000);
+    });
+}
 
-let copy=[]; // empty array 
 
-arr.forEach((element)=>{
-    // console.log(element);
-    copy.push(element);
-});
-
-
-console.log(copy);
+addten(5)
+   .then((result1)=>{
+    console.log("result1:",result1);
+    return addten(result1);
+   }).then((result2)=>{
+    console.log("result2:",result2);
+    return addten(result2);
+   }).then((result3)=>{
+    console.log("result3:",result3);
+   }).catch((error)=>{
+    console.log("error:",error);
+   });
