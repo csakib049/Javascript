@@ -1,25 +1,13 @@
-// var userdata={
-//     name:string,
-//     id:number,
-//     company:string
-// }={
-//     name:"sakib",
-//     id:234,
-//     company:"samsung"
-// }
-
-var userdata={
-    name:string,
-    id:number,
-    company:string
-}={
-    name:"sakib",
-    id:390,
-    company:"samsung"
+type userInfo={
+    [key:string]:string|number;
 }
 
 
-userdata.name="shahriar";
+let user={
+    nam:"sakib",
+    id:390,
+    dept:"cse",
+    mark:3223
+}
 
-console.log(userdata.name);
-console.log(userdata.company);
+console.log(user.nam);
