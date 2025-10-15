@@ -1,23 +1,29 @@
-import React from 'react'
-import Card from './components/Card'
-import User from './components/User'
+// import User from './components/User'
 
+// const App = () => {
+//   return (
+
+//       <div className='parent'>
+//         <User name="sakib" age={23} isStudent={true}/>
+//         <User name="shahriar" age={22} isStudent={true}/>
+//         <User name="sdfsdf" age={230} isStudent={false}/>
+//       </div>
+
+//   )
+// }
+
+// export default App;
+
+
+import User from "./components/User";
 
 const App = () => {
-
-
-  const arr=["sakib","shahriar","nazifa"];
-
-
   return (
-    <div className='parent'>
-      <User name={arr[0]}/>
-      <User name={arr[1]}/>
-      <User name={arr[2]}/>
-
+    <div className="parent">
+      <User name="sakib"/>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
 

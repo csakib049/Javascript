@@ -1,11 +1,24 @@
-import React from 'react'
+// const User=(props)=>{
 
-const user = (props) => {
-  return (
-    <div style={{color:'white'}}>{props.name}</div>
+//     return(
+//        <div className="user">
+//         <p>Name:{props.name} </p>
+//         <p>Age:{props.age}</p>
+//         <p>Student:{props.isStudent ? "Yes":"No"}</p>
+//        </div>
+//     );
+// }
 
-    
-  )
+// export default User;
+
+
+const User=(props)=>{
+
+    return(
+        <div className="user">
+        <h1>His name is {props.name}</h1>
+        </div>
+    );
 }
 
-export default user
+export default User;
