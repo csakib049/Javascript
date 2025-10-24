@@ -2,32 +2,29 @@ import React, { useState } from 'react'
 
 const App = () => {
 
-  const [num, setNum] = useState("");
+  const user={
+    name:"sakib",
+    age:23,
+    id:390
+  }
+
+   localStorage.setItem("user",JSON.stringify(user));
+
+   const data=JSON.parse(localStorage.getItem("user"));
+
+
+   const [nam,setnam]=useState(false);
+
+   function btnclicked (){
+       setnam(true);
+   }
 
 
   return (
     <div>
+      <button onClick={btnclicked}>click me </button>
 
-      {/* these 3 things  happen while pressig submit  */}
-      <form action="" onSubmit={(e) => {
-        e.preventDefault();    // prevent default 
-        console.log(num); // console e print fortase 
-        setNum("");     // empty the box 
-      }}>
-
-
-         {/* input */}
-        <input onChange={(e) => {
-          setNum(e.target.value);  // invoke function to update the value of num 
-        }} type="text" placeholder='enter your name ' value={num} />
-
-
-        <button>submit</button>  
-        
-
-
-      </form>
-
+      {nam && <h1>me name is {data.name}</h1>}
     </div>
   )
 }
