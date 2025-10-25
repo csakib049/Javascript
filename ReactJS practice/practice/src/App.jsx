@@ -1,21 +1,52 @@
-import React from 'react'
+
+import React, { useState, useEffect } from "react";
 
 const App = () => {
 
-  async function btnclicked(){
 
-    const responce= await fetch('https://jsonplaceholder.typicode.com/todos/1');
-    console.log(responce);
+  const [count,setcount]=useState(0);
+  const[count2,setcount2]=useState(0);
 
-    const data=await responce.json();
 
-    console.log(data);
+  function amni(){
+    console.log("amni amni call hoy*****************");
   }
+
+
+  
+  useEffect(()=>{
+    amni();
+  },[count2]);
+
+
+
+  function btnclicked(){
+    console.log('button was clicked ');
+
+    setcount(count+1);
+  }
+
+  function btnclicked2(){
+    console.log('button2 was clicked ');
+
+    setcount2(count2+1);
+  }
+
+
+
+
 
 
   return (
     <div>
-      <button onClick={btnclicked}>click</button>
+
+       <h1>{count} </h1>
+      <button onClick={btnclicked}>click me 1 </button>
+
+
+      <h1>{count2} </h1>
+      <button onClick={btnclicked2}>click me 2</button>
+      
     </div>
   )
 }
