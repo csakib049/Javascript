@@ -1,29 +1,18 @@
-import React from 'react'
-import {Routes,Route} from 'react-router-dom'
-import Navbar from './pages/Navbar'
-import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Product from './pages/Product'
-import Men from './pages/Men'
-import Women from './pages/Women'
+import React, { useState } from 'react'
+import Navbar from './Navbar';
 
 const App = () => {
+
+  const [theme,setTheme]=useState('Light');
+
+
   return (
     <div>
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/contact' element={<Contact/>}/>
+      <h1>the theme is {theme}</h1>
 
-        <Route path='/product' element={<Product/>}>
-          <Route path='men' element={<Men/>}/>
-          <Route path='women' element={<Women/>}/>
-        </Route>
-        
 
-      </Routes>
+      <Navbar theme={theme} setTheme={setTheme}/>
+      
     </div>
   )
 }
