@@ -1,20 +1,17 @@
-import React, { useState } from 'react'
-import Navbar from './Navbar';
+import React from 'react';
+import { Sakib } from './UserContext';
+import Card from './Card';
 
 const App = () => {
-
-  const [theme,setTheme]=useState('Light');
-
+  const userName = "Kuttar baccha";
 
   return (
     <div>
-      <h1>the theme is {theme}</h1>
-
-
-      <Navbar theme={theme} setTheme={setTheme}/>
-      
+      <Sakib.Provider value={userName}>
+        <Card />
+      </Sakib.Provider>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
